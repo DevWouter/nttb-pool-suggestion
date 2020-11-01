@@ -1,9 +1,11 @@
 <script style="ts">
   import { config } from "./data-suggestions";
 
-  $: data = config.suggestions;
+  let lines = [];
+
+  lines.push('import type { Suggestion } from "./suggestion";');
+  lines.push("");
+  lines.push("export const config: { suggestions: Suggestion[] } = ");
 </script>
 
-<textarea>import type &lbrace; Suggestion &rbrace; from "./suggestion"; export
-  const suggestions: Suggestion[] =
-  {JSON.stringify(data, undefined, 2)}</textarea>
+<textarea>{lines.join('\n')}{JSON.stringify(config, undefined, 2)}{';'}</textarea>

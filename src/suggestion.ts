@@ -6,6 +6,7 @@ export interface Suggestion {
 }
 
 export function getStatsForSuggestion(suggestion: Suggestion) {
+  if(!suggestion) return {};
   return {
     totalSlots: suggestion.pools
       .map((x) => x.slots)
