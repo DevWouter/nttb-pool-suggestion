@@ -4,7 +4,7 @@ function getRoute() {
     window.location.hash = '#/';
   }
 
-  return window.location.hash.substr(2);
+  return window.location.hash.substr(2).replace(/%20/g, ' ');
 }
 
 export const locationStore = readable(getRoute(), (set) => {
