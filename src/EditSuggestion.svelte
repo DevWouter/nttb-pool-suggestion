@@ -122,4 +122,3 @@
   </tfoot>
 </table>
 
-<pre>{JSON.stringify(suggestion, undefined, 2)}</pre>
