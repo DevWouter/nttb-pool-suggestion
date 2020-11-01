@@ -2,7 +2,8 @@
   import { config } from "./data-suggestions";
   import type { PoolSuggestion } from "./pool-suggestion";
   import { getStatsForSuggestion } from "./suggestion";
-  export var key = "";
+
+  export let key = "";
 
   var suggestion = config.suggestions.find((x) => x.key === key);
 
